@@ -1,0 +1,8 @@
+// fix 0 height for parent of float elements
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
