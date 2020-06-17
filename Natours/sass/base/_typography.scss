@@ -1,7 +1,6 @@
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    /* font-size: 16px; */
     line-height: 1.7;
     color: $color-grey-dark;
 }
@@ -9,9 +8,9 @@ body {
 .heading-primary {
     color: $color-white;
     text-transform: uppercase;
-
     backface-visibility: hidden;
     margin-bottom: 6rem;
+
     &--main {
         display: block;
         font-size: 6rem;
@@ -26,9 +25,8 @@ body {
             letter-spacing: 1rem;
             font-size: 5rem;
         }
-        /* animation-iteration-count: 3; */
-        /* animation-delay: 3s; */
     }
+
     &--sub {
         display: block;
         font-size: 2rem;
@@ -48,12 +46,16 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
-    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-    -webkit-background-clip: text;
-    // text transparent and got bg gradient
-    color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
+    color: $color-primary-dark;
+
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
 
     @include respond(tab-port) {
         font-size: 3rem;
@@ -77,6 +79,7 @@ body {
 
 .paragraph {
     font-size: $default-font-size;
+
     &:not(:last-child) {
         margin-bottom: 3rem;
     }

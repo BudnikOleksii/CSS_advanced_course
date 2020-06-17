@@ -13,6 +13,7 @@
         left: 0;
         width: 100%;
         // hide other side
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 3px;
         overflow: hidden;
@@ -63,7 +64,8 @@
                 url(../img/nat-5-small.jpg);
         
             @media (min-resolution: 192dpi) and (min-width: 37.5em),
-                (min-width: 120em) {
+                   (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+                   (min-width: 120em) {
                 background-image: linear-gradient(to right bottom, 
                     $color-secondary-light, $color-secondary-dark), 
                     url(../img/nat-5.jpg);
@@ -76,7 +78,8 @@
                 url(../img/nat-6-small.jpg);
         
             @media (min-resolution: 192dpi) and (min-width: 37.5em),
-                (min-width: 120em) {
+                   (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+                   (min-width: 120em) {
                 background-image: linear-gradient(to right bottom, 
                     $color-primary-light, $color-primary-dark), 
                     url(../img/nat-6.jpg);
@@ -89,7 +92,8 @@
                 url(../img/nat-7-small.jpg);
         
             @media (min-resolution: 192dpi) and (min-width: 37.5em),
-                (min-width: 120em) {
+                   (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+                   (min-width: 120em) {
                 background-image: linear-gradient(to right bottom, 
                     $color-tertiary-light, $color-tertiary-dark), 
                     url(../img/nat-7.jpg);
@@ -135,10 +139,12 @@
 
     &__details {
         padding: 3rem;
+        
         ul {
             list-style: none;
             width: 80%;
             margin: 0 auto;
+            
             li {
                 text-align: center;
                 font-size: 1.5rem;
