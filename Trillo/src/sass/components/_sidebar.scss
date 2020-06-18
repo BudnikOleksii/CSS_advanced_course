@@ -33,7 +33,7 @@
         // for growing from bottom
         // transform-origin: bottom;
         transition: transform .2s,
-                    width .4s cubic-bezier(1, 0, 0, 1) .2s // .2s delay
+                    width .4s cubic-bezier(1,0,0,1) .2s, // .2s delay
                     background-color .1s;
     }
 
