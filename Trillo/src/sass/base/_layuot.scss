@@ -11,15 +11,11 @@
     display: flex;
 }
 
-.sidebar {
-    background-color: var(--color-grey-dark-1);
-
-    // 0 for shrink cause we don't need any width changes
-    flex: 0 0 18%;
-}
-
 .hotel-view {
     background-color: var(--color-white);
+
+    background-color: orangered;
+    height: 80rem;
 
     // occupying all available space
     flex: 1;
